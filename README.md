@@ -15,11 +15,12 @@ Solution? Server is just a mediator between peers that are sharing files. The re
 
 **Server must not get the file in one go, since this kills the nature of P2P. Instead, server should behave as another leecher and provider of link for additional sharing.**
 
-1. Start seeding a file to a server, which gives you a URL from which other leechers can get the content
-2. You get a URL with the location of that file, you need to have your browser opened
-3. Once you give that URL to someone, the seeding process starts, you are still the seeder
-4. You get info about the download status and about which ip is downloading the picture (each IP gets download bar with different colors)
-5. Once you close the page, the file is gone
+1. Server is a torrent tracker
+2. You push a torrent to that tracker, which gives you a URL from which other leechers can get the content
+3. You get a URL with the location of that torrent, you need to have your browser opened
+4. Once you give that URL to someone, the seeding process starts, you are still the seeder
+5. You get info about the download status and about which ip is downloading the picture (each IP gets download bar with different colors)
+6. Once you close the page, the file is gone
 
 We basically need to build something on top of [instant.io](https://instant.io/).
 
