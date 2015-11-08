@@ -1,0 +1,16 @@
+{
+  "name": "seedshot",
+  "version": "1.0.0",
+  "description": "P2P screenshot sharing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/twobucks/seedshot.git"
+  },
+  "author": "Hrvoje Simic <hrvoje@twobucks.co>",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/twobucks/seedshot#readme"
+}
