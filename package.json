@@ -1,7 +1,7 @@
 {
   "name": "seedshot",
   "version": "1.0.0",
-  "description": "P2P screenshot sharing",
+  "description": "ephemeral P2P screenshot sharing",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,5 +12,9 @@
   },
   "author": "Hrvoje Simic <hrvoje@twobucks.co>",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/twobucks/seedshot#readme"
+  "homepage": "https://bitbucket.org/twobucks/seedshot#readme",
+  "dependencies": {
+    "bittorrent-tracker": "^6.0.6",
+    "parse-torrent": "^5.4.0"
+  }
 }
