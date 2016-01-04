@@ -4,7 +4,14 @@
   "description": "ephemeral P2P screenshot sharing",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard",
+    "build": "npm run build-css && npm run build-js",
+    "build-css": "stylus -u nib css/main.styl -o public/ -c",
+    "build-js": "browserify client > public/bundle.js",
+    "start": "npm run build && node server",
+    "watch": "npm run watch-css & npm run watch-js & DEBUG=instant* nodemon server",
+    "watch-css": "stylus -u nib css/main.styl -o public/ -w",
+    "watch-js": "watchify client -o public/bundle.js -dv"
   },
   "repository": {
     "type": "git",
@@ -15,6 +22,14 @@
   "homepage": "https://bitbucket.org/twobucks/seedshot#readme",
   "dependencies": {
     "bittorrent-tracker": "^6.0.6",
+    "express": "^4.13.3",
+    "express-handlebars": "^2.0.1",
     "parse-torrent": "^5.4.0"
+  },
+  "devDependencies": {
+    "nib": "^1.1.0",
+    "nodemon": "^1.8.1",
+    "stylus": "^0.53.0",
+    "watchify": "^3.6.1"
   }
 }
