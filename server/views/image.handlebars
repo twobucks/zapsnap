@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>Seedshot</title>
+  </head>
+  <body>
+    {{#if infoHash}}
+      <img id="img2" src="{{infoHash}}"/>
+    {{else}}
+      <img id="img" src="data:image/jpeg;base64,{{base64}}"/>
+    {{/if}}
+
+  </body>
+  <script type='text/javascript' src="/public/bundle.js"></script>
+</html>

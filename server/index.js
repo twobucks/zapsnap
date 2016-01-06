@@ -12,26 +12,25 @@ var app = express()
 app.use(bodyParser.json())
 
 app.get('/', function(req, res){
-  res.render('index', {
-  })
+  res.render('index')
 })
 
-app.get('/images/:uuid', function(req, res){
+app.get('/:uuid', function(req, res){
   var images = db.get('images')
 
   images.findOne({ uuid: req.params.uuid }).on('success', function (doc) {
     if (doc){
-      res.render("index", {
+      res.render("image", {
         base64: doc.base64,
         infoHash: doc.infoHash
       })
     } else {
-      res.render("index")
+      res.render("image")
     }
   });
 })
 
-app.post('/images/:uuid', function(req, res){
+app.post('/:uuid', function(req, res){
   var hash = req.body.infoHash
   var images = db.get('images')
   images.findAndModify({query: { uuid: req.params.uuid},
@@ -53,7 +52,6 @@ app.post('/', function(req, res){
       if (err) throw err;
     })
     res.json({
-      message: "ok",
       uuid: id
     })
   });
@@ -64,7 +62,7 @@ app.set('views', path.join(__dirname, 'views'))
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 app.set('x-powered-by', false)
-app.use(express.static(path.join(__dirname, '../public')))
+app.use('/public', express.static(path.join(__dirname, '../public')))
 
 var server = app.listen(3000, function () {
   var port = server.address().port;

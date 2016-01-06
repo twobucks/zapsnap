@@ -3,12 +3,14 @@
     <title>Seedshot</title>
   </head>
   <body>
-    {{#if infoHash}}
-      <img id="img2" src="{{infoHash}}"/>
-    {{else}}
-      <img id="img" src="data:image/jpeg;base64,{{base64}}"/>
-    {{/if}}
+    <h1>Seedshot</h1>
 
+    <p>Ephemeral P2P screenshot sharing.</p>
+
+    <h2>Instructions</h2>
+    <code>
+      npm install -g seedshot-cli<br/>
+      seedshot
+    </code>
   </body>
-  <script type='text/javascript' src="/bundle.js"></script>
 </html>
