@@ -3,8 +3,12 @@
     <title>Seedshot</title>
   </head>
   <body>
-    <img id="img2" src=""/>
-    <img id="img" src="data:image/jpeg;base64,{{base64}}"/>
+    {{#if infoHash}}
+      <img id="img2" src="{{infoHash}}"/>
+    {{else}}
+      <img id="img" src="data:image/jpeg;base64,{{base64}}"/>
+    {{/if}}
+
   </body>
   <script type='text/javascript' src="/bundle.js"></script>
 </html>

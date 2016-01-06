@@ -18,28 +18,26 @@ app.get('/', function(req, res){
 
 app.get('/images/:uuid', function(req, res){
   var images = db.get('images')
-  console.log(req.params.uuid)
+
   images.findOne({ uuid: req.params.uuid }).on('success', function (doc) {
-    res.render("index", {
-      base64: doc.base64,
-      infoHash: doc.infoHash
-    })
+    if (doc){
+      res.render("index", {
+        base64: doc.base64,
+        infoHash: doc.infoHash
+      })
+    } else {
+      res.render("index")
+    }
   });
 })
 
 app.post('/images/:uuid', function(req, res){
-  console.log(req.body)
   var hash = req.body.infoHash
   var images = db.get('images')
-  images.update({
-    uuid: req.params.uuid
-  }, {
-    uuid: req.params.uuid,
+  images.findAndModify({query: { uuid: req.params.uuid},
+                       update: { uuid: req.params.uuid, infoHash: hash}})
+  res.json({
     infoHash: hash
-  }, function(){
-    res.json({
-      infoHash: hash
-    })
   })
 })
 
