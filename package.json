@@ -34,7 +34,7 @@
     "parse-torrent": "^5.4.0",
     "request": "^2.67.0",
     "uuid": "^2.0.1",
-    "webtorrent": "^0.70.0"
+    "webtorrent": "^0.71.1"
   },
   "devDependencies": {
     "nib": "^1.1.0",
