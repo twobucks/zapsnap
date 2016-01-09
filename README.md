@@ -1,6 +1,6 @@
 # Seedshot
 
-Ephemeral peer to peer screenshot sharing.
+Peer to peer screenshot sharing from your browser.
 
 ## Idea
 
