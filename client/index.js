@@ -2,7 +2,6 @@ var Webtorrent = require('webtorrent')
 var client = new Webtorrent()
 var request = require('request')
 
-
 var img = document.getElementById("img")
 var seededImg = document.getElementById('img2')
 
