@@ -1,4 +1,4 @@
-# Seedshot
+# [Seedshot](http://seedshot.io/)
 
 Peer to peer screenshot sharing from your browser.
 
