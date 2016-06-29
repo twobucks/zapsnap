@@ -28,10 +28,11 @@
     "fd-slicer": "^1.0.1",
     "http-post": "^0.1.1",
     "monk": "^1.0.1",
+    "mongodb": "^1.4.4",
     "multiparty": "^4.1.2",
     "request": "^2.67.0",
     "uuid": "^2.0.1",
-    "webtorrent": "^0.71.1"
+    "webtorrent": "0.71.1"
   },
   "devDependencies": {
     "nib": "^1.1.0",
