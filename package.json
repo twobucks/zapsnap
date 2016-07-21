@@ -32,7 +32,7 @@
     "multiparty": "^4.1.2",
     "request": "^2.67.0",
     "uuid": "^2.0.1",
-    "webtorrent": "0.71.1"
+    "webtorrent": "0.70.0"
   },
   "devDependencies": {
     "nib": "^1.1.0",
