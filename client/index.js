@@ -10,9 +10,8 @@ function updateSpeed (torrent) {
   status.innerHTML =
     '<b>Peers:</b> ' + torrent.swarm.wires.length
 }
-
 if (seededImg){
-  client.add(seededImg.src, function(torrent){
+  client.add(seededImg.dataset.infoHash, function(torrent){
     torrent.swarm.on('download', function(){
       updateSpeed(torrent)
     })

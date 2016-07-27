@@ -7,7 +7,7 @@
   <body>
     <div class='container'>
       {{#if infoHash}}
-        <img id="img2" src="{{infoHash}}"/>
+        <img id="img2" data-info-hash="{{infoHash}}"/>
       {{else}}
         <img id="img" src="data:image/jpeg;base64,{{base64}}"/>
       {{/if}}
