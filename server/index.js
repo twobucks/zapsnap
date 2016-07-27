@@ -15,6 +15,10 @@ app.get('/', function(req, res){
   res.render('index')
 })
 
+app.get('/404', function(req, res){
+  res.render('404')
+})
+
 app.get('/:uuid', function(req, res){
   var images = db.get('images')
 
@@ -25,7 +29,7 @@ app.get('/:uuid', function(req, res){
         infoHash: doc.infoHash
       })
     } else {
-      res.render("image")
+      res.redirect('404')
     }
   });
 })
