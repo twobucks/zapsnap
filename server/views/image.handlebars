@@ -8,9 +8,9 @@
     <div class='container'>
       <div class='push'></div>
       {{#if infoHash}}
-        <img id="img2" data-info-hash="{{infoHash}}"/>
+        <img id="downloaded" data-info-hash="{{infoHash}}"/>
       {{else}}
-        <img id="img" src="data:image/jpeg;base64,{{base64}}"/>
+        <img id="seeded" src="data:image/jpeg;base64,{{base64}}"/>
       {{/if}}
       <p class='status'></p>
       <div class='push'></div>

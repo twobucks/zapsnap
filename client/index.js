@@ -2,16 +2,16 @@ var Webtorrent = require('webtorrent')
 var client = new Webtorrent()
 var request = require('request')
 
-var img = document.getElementById("img")
-var seededImg = document.getElementById('img2')
+var img = document.getElementById("seeded")
+var downloadedImg = document.getElementById("downloaded")
 
 var status = document.querySelector('.status')
 function updateSpeed (torrent) {
   status.innerHTML =
     '<b>Peers:</b> ' + torrent.swarm.wires.length
 }
-if (seededImg){
-  client.add(seededImg.dataset.infoHash, function(torrent){
+if (downloadedImg){
+  client.add(downloadedImg.dataset.infoHash, function(torrent){
     torrent.swarm.on('download', function(){
       updateSpeed(torrent)
     })
@@ -27,7 +27,7 @@ if (seededImg){
 
     torrent.files.forEach(function (file) {
       file.getBuffer(function (er, buf) {
-        seededImg.src = buf.toString()
+        downloadedImg.src = buf.toString()
       })
     })
   })
