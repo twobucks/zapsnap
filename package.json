@@ -8,7 +8,7 @@
     "build": "npm run build-css && npm run build-js",
     "build-css": "stylus -u nib css/main.styl -o public/ -c",
     "build-js": "browserify client > public/bundle.js",
-    "start": "npm run build && node server",
+    "start": "node server",
     "watch": "npm run watch-css & npm run watch-js & DEBUG=instant* nodemon server",
     "watch-css": "stylus -u nib css/main.styl -o public/ -w",
     "watch-js": "watchify client -o public/bundle.js -dv"
