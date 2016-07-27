@@ -6,11 +6,23 @@ var img = document.getElementById("seeded")
 var downloadedImg = document.getElementById("downloaded")
 
 var status = document.querySelector('.status')
+
 function updateSpeed (torrent) {
   status.innerHTML =
     '<b>Peers:</b> ' + torrent.swarm.wires.length
 }
+
 if (downloadedImg){
+  var downloadStarted = false
+
+  setTimeout(function(){
+    if (!downloadStarted){
+      document.getElementById("spinner").style.display = 'none'
+      status.innerHTML =
+        'We are sorry, but the image is no longer present.'
+    }
+  }, 5000) // 5s
+
   client.add(downloadedImg.dataset.infoHash, function(torrent){
     torrent.swarm.on('download', function(){
       updateSpeed(torrent)
@@ -24,6 +36,7 @@ if (downloadedImg){
     updateSpeed(torrent)
 
     console.log('downloading ' + torrent.infoHash)
+    downloadStarted = true
 
     torrent.files.forEach(function (file) {
       file.getBuffer(function (er, buf) {
