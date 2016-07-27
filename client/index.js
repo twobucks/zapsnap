@@ -27,6 +27,7 @@ if (downloadedImg){
 
     torrent.files.forEach(function (file) {
       file.getBuffer(function (er, buf) {
+        document.getElementById("spinner").style.display = 'none'
         downloadedImg.src = buf.toString()
       })
     })
