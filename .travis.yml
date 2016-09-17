@@ -1,2 +1,4 @@
 install: npm install -g standard
 script: npm test
+node_js:
+  - "5.4"
