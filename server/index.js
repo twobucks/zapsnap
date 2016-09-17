@@ -49,6 +49,8 @@ app.post('/', function(req, res){
   var images = db.get('images')
   var id = uuid.v1()
   form.parse(req, function(err, fields, files) {
+    var path = files['file'][0]['path']
+
     fs.readFile(files["file"][0]["path"], function(err, data){
       if (err) throw err
 
@@ -57,6 +59,8 @@ app.post('/', function(req, res){
         base64: data.toString('base64')
       }, function(err, doc){
         if (err) throw err;
+
+        fs.unlink(path)
       })
     })
 
@@ -67,7 +71,6 @@ app.post('/', function(req, res){
 })
 
 app.set('views', path.join(__dirname, 'views'))
-// app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 app.set('x-powered-by', false)
