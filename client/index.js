@@ -2,8 +2,8 @@ var Webtorrent = require('webtorrent')
 var client = new Webtorrent()
 var request = require('request')
 
-var img = document.getElementById("seeded")
-var downloadedImg = document.getElementById("downloaded")
+var img = document.getElementById('seeded')
+var downloadedImg = document.getElementById('downloaded')
 
 var status = document.querySelector('.status')
 
@@ -12,25 +12,25 @@ function updateSpeed (torrent) {
     '<b>Viewing:</b> ' + parseInt(torrent.swarm.wires.length + 1)
 }
 
-if (downloadedImg){
+if (downloadedImg) {
   var downloadStarted = false
 
-  setTimeout(function(){
-    if (!downloadStarted){
-      document.getElementById("spinner").style.display = 'none'
+  setTimeout(function () {
+    if (!downloadStarted) {
+      document.getElementById('spinner').style.display = 'none'
       status.innerHTML =
         'We are sorry, but the image is no longer present.'
     }
   }, 5000) // 5s
 
-  client.add(downloadedImg.dataset.infoHash, function(torrent){
-    torrent.swarm.on('download', function(){
+  client.add(downloadedImg.dataset.infoHash, function (torrent) {
+    torrent.swarm.on('download', function () {
       updateSpeed(torrent)
     })
-    torrent.swarm.on('upload', function(){
+    torrent.swarm.on('upload', function () {
       updateSpeed(torrent)
     })
-    setInterval(function(){
+    setInterval(function () {
       updateSpeed(torrent)
     }, 5000)
     updateSpeed(torrent)
@@ -40,21 +40,21 @@ if (downloadedImg){
 
     torrent.files.forEach(function (file) {
       file.getBuffer(function (er, buf) {
-        document.getElementById("spinner").style.display = 'none'
+        document.getElementById('spinner').style.display = 'none'
         downloadedImg.src = buf.toString()
       })
     })
   })
 } else {
-  client.seed(new Buffer(img.src), {name: "image"}, function(torrent){
+  client.seed(new Buffer(img.src), {name: 'image'}, function (torrent) {
     console.log('seeding ' + torrent.infoHash)
-    torrent.swarm.on('download', function(){
+    torrent.swarm.on('download', function () {
       updateSpeed(torrent)
     })
-    torrent.swarm.on('upload', function(){
+    torrent.swarm.on('upload', function () {
       updateSpeed(torrent)
     })
-    setInterval(function(){
+    setInterval(function () {
       updateSpeed(torrent)
     }, 5000)
     updateSpeed(torrent)
