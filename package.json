@@ -11,7 +11,8 @@
     "start": "node server",
     "watch": "npm run watch-css & npm run watch-js & DEBUG=instant* nodemon server",
     "watch-css": "stylus -u nib css/main.styl -o public/ -w",
-    "watch-js": "watchify client -o public/bundle.js -dv"
+    "watch-js": "watchify client -o public/bundle.js -dv",
+    "deploy": "rsync -av --progress --exclude=node_modules --exclude=db --exclude=.git . root@82.196.13.85:/home/hrvoje/seedshot"
   },
   "repository": {
     "type": "git",
