@@ -49,12 +49,17 @@ app.post('/', function(req, res){
   var images = db.get('images')
   var id = uuid.v1()
   form.parse(req, function(err, fields, files) {
-    images.insert({
-      uuid: id,
-      base64: fs.readFileSync(files["file"][0]["path"]).toString('base64')
-    }, function(err, doc){
-      if (err) throw err;
+    fs.readFile(files["file"][0]["path"], function(err, data){
+      if (err) throw err
+
+      images.insert({
+        uuid: id,
+        base64: data.toString('base64')
+      }, function(err, doc){
+        if (err) throw err;
+      })
     })
+
     res.json({
       uuid: id
     })
