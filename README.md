@@ -1,4 +1,4 @@
-# [Seedshot](http://seedshot.io/)
+# [Seedshot](http://seedshot.io/) [![Build Status](https://travis-ci.org/twobucks/seedshot.svg?branch=master)](https://travis-ci.org/twobucks/seedshot)
 
 Peer to peer screenshot sharing from your browser.
 
