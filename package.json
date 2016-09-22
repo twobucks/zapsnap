@@ -14,10 +14,10 @@
     "watch-js": "watchify client -o public/bundle.js -dv",
     "deploy": "rsync -av --progress --exclude=node_modules --exclude=db --exclude=.git . root@82.196.13.85:~/seedshot"
   },
-  "repository": "bitbucket:twobucks/seedshot",
+  "repository": "twobucks/seedshot",
   "author": "Hrvoje Simic <hrvoje@twobucks.co>",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/twobucks/seedshot#readme",
+  "homepage": "https://github.com/twobucks/seedshot#readme",
   "dependencies": {
     "body-parser": "^1.14.2",
     "connect-busboy": "0.0.2",
