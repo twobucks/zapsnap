@@ -12,12 +12,9 @@
     "watch": "npm run watch-css & npm run watch-js & DEBUG=instant* nodemon server",
     "watch-css": "stylus -u nib css/main.styl -o public/ -w",
     "watch-js": "watchify client -o public/bundle.js -dv",
-    "deploy": "rsync -av --progress --exclude=node_modules --exclude=db --exclude=.git . root@82.196.13.85:/home/hrvoje/seedshot"
+    "deploy": "rsync -av --progress --exclude=node_modules --exclude=db --exclude=.git . root@82.196.13.85:~/seedshot"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@bitbucket.org/twobucks/seedshot.git"
-  },
+  "repository": "bitbucket:twobucks/seedshot",
   "author": "Hrvoje Simic <hrvoje@twobucks.co>",
   "license": "MIT",
   "homepage": "https://bitbucket.org/twobucks/seedshot#readme",
