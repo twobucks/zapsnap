@@ -2,6 +2,18 @@
 
 Temporary peer to peer screenshot sharing from your browser.
 
+## Installation
+
+```
+npm install -g seedshot-cli
+```
+
+## Usage
+
+```
+seedshot
+```
+
 ## License
 
 MIT
