@@ -14,6 +14,12 @@ npm install -g seedshot-cli
 seedshot
 ```
 
+## Development
+
+```
+npm start
+```
+
 ## License
 
 MIT
