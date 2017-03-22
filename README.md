@@ -43,7 +43,7 @@ MIT
 
 ## Sponsors
 
-Two Bucks Ltd © 2016
+Two Bucks Ltd © 2017
 
 ![https://twobucks.co](https://twobucks.co/assets/images/logo-small.png)
 
