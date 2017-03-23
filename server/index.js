@@ -36,8 +36,10 @@ app.get('/:uuid', function (req, res) {
 app.post('/:uuid', function (req, res) {
   var hash = req.body.infoHash
   var images = db.get('images')
-  images.findAndModify({ query: { uuid: req.params.uuid },
-                         update: { uuid: req.params.uuid, infoHash: hash }})
+  images.findAndModify({
+    query: { uuid: req.params.uuid },
+    update: { uuid: req.params.uuid, infoHash: hash }
+  })
   res.json({
     infoHash: hash
   })
