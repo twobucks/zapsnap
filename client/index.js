@@ -32,7 +32,7 @@ if (downloadedImg) {
     })
     setInterval(function () {
       updateSpeed(torrent)
-    }, 5000)
+    }, 1000)
     updateSpeed(torrent)
 
     console.log('downloading ' + torrent.infoHash)
@@ -56,7 +56,7 @@ if (downloadedImg) {
     })
     setInterval(function () {
       updateSpeed(torrent)
-    }, 5000)
+    }, 1000)
     updateSpeed(torrent)
 
     request.post(window.location.href, {
