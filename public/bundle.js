@@ -23,7 +23,7 @@ if (downloadedImg) {
       status.innerHTML =
         'We are sorry, but the image is no longer present.'
     }
-  }, 20000) // 20s
+  }, 60000) // 60s
 
   client.add(downloadedImg.dataset.infoHash, function (torrent) {
     torrent.swarm.on('download', function () {
