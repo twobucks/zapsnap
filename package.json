@@ -13,7 +13,8 @@
     "watch-css": "stylus -u nib css/main.styl -o public/ -w",
     "watch-js": "watchify client -o public/bundle.js -dv",
     "deploy": "rsync -av --progress --exclude=node_modules --exclude=db --exclude=.git . root@82.196.13.85:/home/hrvoje/seedshot",
-    "ssh": "ssh root@82.196.13.85"
+    "ssh": "ssh root@82.196.13.85",
+    "db": "mongod --dbpath db"
   },
   "repository": "twobucks/seedshot",
   "author": "Hrvoje Simic <hrvoje@twobucks.co>",
