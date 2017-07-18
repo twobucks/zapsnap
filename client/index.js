@@ -24,10 +24,10 @@ if (downloadedImg) {
   }, 60000) // 60s
 
   client.add(downloadedImg.dataset.infoHash, function (torrent) {
-    torrent.swarm.on('download', function () {
+    torrent.on('download', function () {
       updateSpeed(torrent)
     })
-    torrent.swarm.on('upload', function () {
+    torrent.on('upload', function () {
       updateSpeed(torrent)
     })
     setInterval(function () {
@@ -48,10 +48,10 @@ if (downloadedImg) {
 } else {
   client.seed(new Buffer(img.src), {name: 'image'}, function (torrent) {
     console.log('seeding ' + torrent.infoHash)
-    torrent.swarm.on('download', function () {
+    torrent.on('download', function () {
       updateSpeed(torrent)
     })
-    torrent.swarm.on('upload', function () {
+    torrent.on('upload', function () {
       updateSpeed(torrent)
     })
     setInterval(function () {
