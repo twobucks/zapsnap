@@ -6,6 +6,7 @@
     <link href="/public/main.css" rel="stylesheet"></link>
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet"></link>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Pacifico" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -19,25 +20,29 @@
   </head>
   <body>
     <div class='container'>
-      <header>
-        <h1>Snapzap</h1>
-      </header>
+      <h1 class="header">Snapzap</h1>
 
       <h2>Temporary peer to peer screenshot sharing from your browser</h2>
 
       <div class='button-wrapper'>
 
+        <div class='col-sm-4'>
         <a href='#' class='button'>
           Download for MacOS
         </a>
+        </div>
 
+        <div class='col-sm-4'>
         <a href='#' class='button'>
           Download for Windows
         </a>
+        </div>
 
+        <div class='col-sm-4'>
         <a href='#' class='button'>
           Download for Linux
         </a>
+        </div>
       </div>
 
       <div class='faq'>
@@ -57,15 +62,14 @@
           <b>How do you afford this?</b>
 
           We reduce hosting costs by being peer to peer, so the only
-          expense we have is hosting this server on Digital Ocean, which
+          expense we have is hosting this server on <a href="https://digitalocean.com">Digital Ocean</a>, which
           costs $10/mo.
         </p>
       </div>
 
+      <footer>
+        <a href="https://twobucks.co">Two Bucks</a> © 2017
+      </footer>
     </div>
-
-    <footer>
-      <a href="https://twobucks.co">Two Bucks</a> © 2017
-    </footer>
   </body>
 </html>

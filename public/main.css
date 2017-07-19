@@ -5,19 +5,17 @@ body {
   background: #16a085; /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #16a085, #f4d03f); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #16a085, #f4d03f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  font-family: 'Open Sans', sans-serif;
-  color: #fff;
+  font-family: 'Open Sans', sans-serif !important;
+  color: #fff !important;
 }
-header h1 {
-  font-family: 'Pacifico', cursive;
+h1.header {
+  font-family: 'Pacifico', cursive !important;
   font-size: 64px;
 }
 .container {
-  width: 920px;
-  margin: auto;
   text-align: center;
   min-height: 100%;
-  margin-bottom: -70px;
+  margin-bottom: -70px !important;
 }
 .button {
   background-color: transparent;
@@ -30,10 +28,18 @@ header h1 {
   overflow: hidden;
   outline: none;
   text-decoration: none;
-  margin: 5px;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .button-wrapper {
   margin: 50px;
+  padding-bottom: 0px;
+}
+@media (min-width: 768px) {
+  .button-wrapper {
+    padding-bottom: 100px;
+  }
 }
 p b {
   margin: 10px;
@@ -45,12 +51,13 @@ p b {
   margin: auto;
 }
 a {
-  color: #fff;
-  font-weight: 700;
+  color: #fff !important;
+  font-weight: 700 !important;
   text-decoration: none;
 }
 footer,
 .push {
+  margin-top: 70px;
   height: 50px;
   line-height: 50px;
   text-align: center;
