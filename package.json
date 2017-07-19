@@ -22,6 +22,7 @@
   "homepage": "https://github.com/twobucks/seedshot#readme",
   "dependencies": {
     "body-parser": "^1.14.2",
+    "compression": "^1.6.2",
     "connect-busboy": "0.0.2",
     "express": "^4.13.3",
     "express-handlebars": "^2.0.1",
