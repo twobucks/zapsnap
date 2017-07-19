@@ -7,7 +7,7 @@
     "test": "standard",
     "build": "npm run build-css && npm run build-js",
     "build-css": "stylus -u nib css/main.styl -o public/ -c",
-    "build-js": "browserify --debug client | exorcist public/bundle.js.map > public/bundle.js",
+    "build-js": "browserify --debug client > public/bundle.js && uglifyjs --compress --mangle -- public/bundle.js > public/bundle.min.js",
     "start": "node server",
     "watch": "npm run watch-css & npm run watch-js & DEBUG=instant* nodemon server",
     "watch-css": "stylus -u nib css/main.styl -o public/ -w",
@@ -35,7 +35,6 @@
     "webtorrent": "^0.98.19"
   },
   "devDependencies": {
-    "exorcist": "^0.4.0",
     "nib": "^1.1.0",
     "nodemon": "^1.8.1",
     "stylus": "^0.53.0",
