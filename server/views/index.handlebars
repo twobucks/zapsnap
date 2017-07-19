@@ -1,9 +1,10 @@
 <html>
   <head>
-    <title>Seedshot</title>
+    <title>Snapzap</title>
     <link href="/public/reset.css" rel="stylesheet"></link>
     <link href="/public/main.css" rel="stylesheet"></link>
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet"></link>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Pacifico" rel="stylesheet">
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -18,30 +19,52 @@
   <body>
     <div class='container'>
       <header>
-      <h1>Seedshot</h1>
+        <h1>Snapzap</h1>
       </header>
 
-      <p>Peer to peer screenshot sharing from your browser.</p>
-      <hr />
+      <h2>Temporary peer to peer screenshot sharing from your browser</h2>
 
-      <p>1. install the CLI</p>
-      <code>
-        npm install -g seedshot-cli<br/>
-      </code>
+      <div class='button-wrapper'>
 
-      <p>2. Take the screenshot</p>
-      <code>
-        seedshot
-      </code>
-      <p>3. Seed it from your browser</p>
-      <img src='/public/recording.gif' alt='' />
-        <a href='http://github.com/twobucks/seedshot'>
-          <i class="ion-social-github"></i>
+        <a href='#' class='button'>
+          Download for MacOS
         </a>
-      <div class='push'></div>
+
+        <a href='#' class='button'>
+          Download for Windows
+        </a>
+
+        <a href='#' class='button'>
+          Download for Linux
+        </a>
+      </div>
+
+      <div class='faq'>
+        <h2>FAQ</h2>
+
+        <p>
+          <b>Which browsers are supported?</b>
+
+          We depend on <a href="https://webtorrent.io">Webtorrent</a> for browser support. That means we support Chrome, Firefox and Opera.
+        </p>
+        <p>
+          <b>What's the pricing model?</b>
+
+          It's completely free and open source and the source code is hosted on <a href="https://github.com/twobucks/snapzap">Github</a>.
+        </p>
+        <p>
+          <b>How do you afford this?</b>
+
+          We reduce hosting costs by being peer to peer, so the only
+          expense we have is hosting this server on Digital Ocean, which
+          costs $10/mo.
+        </p>
+      </div>
+
     </div>
+
     <footer>
-      Two Bucks © 2016
+      <a href="https://twobucks.co">Two Bucks</a> © 2017
     </footer>
   </body>
 </html>

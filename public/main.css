@@ -1,1 +1,145 @@
-html,body{height:100%;margin:0}.container{width:920px;margin:auto;text-align:center;min-height:100%;margin-bottom:-50px}footer,.push{height:50px;line-height:50px;text-align:center;font-weight:400;font-size:10px}.ion-social-github{color:#808080;display:block;font-size:50px;margin-top:10px;transition:color .3s}.ion-social-github:hover{color:#000}img{max-width:100%}.spinner{margin:100px auto;width:50px;height:40px;text-align:center;font-size:10px}.spinner > div{background-color:#333;height:100%;width:6px;display:inline-block;-webkit-animation:sk-stretchdelay 1.2s infinite ease-in-out;animation:sk-stretchdelay 1.2s infinite ease-in-out}.spinner .rect2{-webkit-animation-delay:-1.1s;animation-delay:-1.1s}.spinner .rect3{-webkit-animation-delay:-1s;animation-delay:-1s}.spinner .rect4{-webkit-animation-delay:-.9s;animation-delay:-.9s}.spinner .rect5{-webkit-animation-delay:-.8s;animation-delay:-.8s}@-webkit-keyframes sk-stretchdelay{0%,40%,100%{-webkit-transform:scaleY(.4)}20%{-webkit-transform:scaleY(1)}}@-moz-keyframes sk-stretchdelay{0%,40%,100%{transform:scaleY(.4);-webkit-transform:scaleY(.4)}20%{transform:scaleY(1);-webkit-transform:scaleY(1)}}@-webkit-keyframes sk-stretchdelay{0%,40%,100%{transform:scaleY(.4);-webkit-transform:scaleY(.4)}20%{transform:scaleY(1);-webkit-transform:scaleY(1)}}@-o-keyframes sk-stretchdelay{0%,40%,100%{transform:scaleY(.4);-webkit-transform:scaleY(.4)}20%{transform:scaleY(1);-webkit-transform:scaleY(1)}}@keyframes sk-stretchdelay{0%,40%,100%{transform:scaleY(.4);-webkit-transform:scaleY(.4)}20%{transform:scaleY(1);-webkit-transform:scaleY(1)}}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: #16a085; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #16a085, #f4d03f); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #16a085, #f4d03f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+}
+header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 64px;
+}
+.container {
+  width: 920px;
+  margin: auto;
+  text-align: center;
+  min-height: 100%;
+  margin-bottom: -70px;
+}
+.button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 1px #fff solid;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  text-decoration: none;
+  margin: 5px;
+}
+.button-wrapper {
+  margin: 50px;
+}
+p b {
+  margin: 10px;
+  font-weight: 700;
+  display: block;
+}
+.faq {
+  width: 300px;
+  margin: auto;
+}
+a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+footer,
+.push {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 10px;
+  color: #ddd;
+}
+footer a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+.spinner {
+  margin: 100px auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+}
+.spinner > div {
+  background-color: #fff;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+.spinner .rect3 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+  }
+}
+@-moz-keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}
+@-o-keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}

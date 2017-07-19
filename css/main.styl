@@ -1,13 +1,52 @@
 html, body 
   height: 100%
   margin: 0
+  background: #16a085; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #16a085, #f4d03f); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #16a085, #f4d03f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: 'Open Sans', sans-serif;
+  color: white
+
+header h1
+  font-family: 'Pacifico', cursive
+  font-size: 64px
 
 .container 
   width: 920px
   margin: auto
   text-align: center
   min-height: 100%
-  margin-bottom: -50px
+  margin-bottom: -70px
+
+.button 
+  background-color: transparent
+  background-repeat: no-repeat
+  border: 1px white solid;
+  color: white
+  border-radius: 5px
+  padding: 10px
+  cursor:pointer
+  overflow: hidden
+  outline:none
+  text-decoration: none
+  margin: 5px
+
+.button-wrapper
+  margin: 50px
+
+p b
+  margin: 10px
+  font-weight: 700
+  display: block
+
+.faq
+  width: 300px
+  margin: auto
+
+a
+  color: #fff
+  font-weight: 700
+  text-decoration: none
 
 footer, .push
   height: 50px
@@ -15,30 +54,24 @@ footer, .push
   text-align: center
   font-weight: 400
   font-size: 10px
+  color: #ddd
 
-.ion-social-github
-  color: gray
-  display: block
-  font-size: 50px
-  margin-top: 10px
-  transition: color 0.3s
-
-.ion-social-github:hover
-  color: black
+footer a 
+  text-decoration: none
 
 img 
   max-width: 100%
 
-.spinner {
+.spinner
   margin: 100px auto;
   width: 50px;
   height: 40px;
   text-align: center;
   font-size: 10px;
-}
+
 
 .spinner > div {
-  background-color: #333;
+  background-color: #fff;
   height: 100%;
   width: 6px;
   display: inline-block;

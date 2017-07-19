@@ -20,7 +20,7 @@ if (downloadedImg) {
     if (!downloadStarted) {
       document.getElementById('spinner').style.display = 'none'
       status.innerHTML =
-        'Unable to find peers for this image. Try waiting a little longer or reloading the browser ' +
+        'Unable to find peers for this image. <br/> Try waiting a little longer or reloading the browser ' +
         ' if you think the image is still available.'
     }
   }, 10000) // 10s
