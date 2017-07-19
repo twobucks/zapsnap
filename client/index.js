@@ -1,6 +1,5 @@
 var Webtorrent = require('webtorrent')
 var client = new Webtorrent()
-var request = require('request')
 
 var img = document.getElementById('seeded')
 var downloadedImg = document.getElementById('downloaded')
@@ -59,11 +58,13 @@ if (downloadedImg) {
     }, 1000)
     updateSpeed(torrent)
 
-    request.post(window.location.href, {
-      body: {
-        infoHash: torrent.magnetURI
-      },
-      json: true
-    })
+    var xhr = new XMLHttpRequest()
+    xhr.open('POST', window.location.href, true)
+    xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8')
+
+    // send the collected data as JSON
+    xhr.send(JSON.stringify({
+      infoHash: torrent.magnetURI
+    }))
   })
 }
