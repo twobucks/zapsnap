@@ -18,9 +18,10 @@ if (downloadedImg) {
     if (!downloadStarted) {
       document.getElementById('spinner').style.display = 'none'
       status.innerHTML =
-        'We are sorry, but the image is no longer present.'
+        'Unable to find peers for this image. Try waiting a little longer or reloading the browser ' +
+        ' if you think the image is still available.'
     }
-  }, 60000) // 60s
+  }, 10000) // 10s
 
   client.add(downloadedImg.dataset.infoHash, function (torrent) {
     torrent.on('download', function () {
