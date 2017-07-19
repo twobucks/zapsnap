@@ -7,6 +7,10 @@ var uuid = require('uuid')
 var db = require('monk')('localhost/seedshot')
 var bodyParser = require('body-parser')
 
+db.then(() => {
+  console.log('Database connection established.')
+})
+
 var app = express()
 app.use(bodyParser.json())
 
@@ -21,7 +25,7 @@ app.get('/404', function (req, res) {
 app.get('/:uuid', function (req, res) {
   var images = db.get('images')
 
-  images.findOne({ uuid: req.params.uuid }).on('success', function (doc) {
+  images.findOne({ uuid: req.params.uuid }).then(function (doc) {
     if (doc) {
       res.render('image', {
         base64: doc.base64,
@@ -36,10 +40,10 @@ app.get('/:uuid', function (req, res) {
 app.post('/:uuid', function (req, res) {
   var hash = req.body.infoHash
   var images = db.get('images')
-  images.findAndModify({
-    query: { uuid: req.params.uuid },
-    update: { uuid: req.params.uuid, infoHash: hash }
-  })
+  images.findOneAndUpdate(
+    { uuid: req.params.uuid },
+    { uuid: req.params.uuid, infoHash: hash }
+  )
   res.json({
     infoHash: hash
   })
@@ -60,7 +64,7 @@ app.post('/', function (req, res) {
         uuid: id,
         base64: data.toString('base64')
       }, function (err, doc) {
-        if (err) throw err
+        if (err) console.log(err)
 
         fs.unlink(path)
       })
