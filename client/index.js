@@ -9,7 +9,7 @@ var status = document.querySelector('.status')
 
 function updateSpeed (torrent) {
   status.innerHTML =
-    '<b>Viewing:</b> ' + parseInt(torrent.swarm.wires.length + 1)
+    '<b>Viewing:</b> ' + parseInt(torrent.wires.length + 1)
 }
 
 if (downloadedImg) {
