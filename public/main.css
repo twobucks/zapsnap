@@ -46,6 +46,7 @@ h1.header {
 }
 .button.disabled {
   color: #ddd !important;
+  color: rgba(255,255,255,0.5) !important;
   cursor: default;
   line-height: 20px;
 }
