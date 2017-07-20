@@ -7,6 +7,7 @@ var uuid = require('uuid')
 var db = require('monk')('localhost/seedshot')
 var bodyParser = require('body-parser')
 var compression = require('compression')
+var emojiFavicon = require('emoji-favicon')
 
 db.then(() => {
   console.log('Database connection established.')
@@ -15,6 +16,7 @@ db.then(() => {
 var app = express()
 app.use(bodyParser.json())
 app.use(compression())
+app.use(emojiFavicon('zap'))
 
 app.get('/', function (req, res) {
   res.render('index')
