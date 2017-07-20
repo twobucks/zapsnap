@@ -29,7 +29,6 @@ of mobile browsers
 * no app so you have to use the CLI tool
 * no Windows support for taking screenshots
 * once you as an owner of an image close the browser, the file might still be available if other peers keep their browser open
-* design 
 
 ## Development
 
