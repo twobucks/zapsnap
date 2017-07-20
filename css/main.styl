@@ -30,6 +30,29 @@ h1.header
   display: block
   margin-top: 20px
   margin-bottom: 20px
+  line-height: 30px
+  height: 60px
+
+  &:hover, &:visited, &:link, &:active {
+    text-decoration: none
+  }
+
+  &:active {
+    color: #16a085 !important /* Fallback for older browsers */
+    background-color: #fff
+  }
+
+  &.disabled {
+    color: #ddd !important
+    cursor: default
+    line-height: 20px
+
+    &:active {
+      color: #ddd !important
+      background-color: transparent !important
+    }
+  }
+
 
 .button-wrapper
   margin: 50px
