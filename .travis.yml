@@ -2,7 +2,7 @@ install: npm install -g standard
 script: npm test
 language: node_js
 node_js:
-  - "5.4"
+  - "7.3.0"
 
 notifications:
   email: false
