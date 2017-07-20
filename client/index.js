@@ -46,7 +46,7 @@ if (downloadedImg) {
     })
   })
 } else {
-  client.seed(new Buffer(img.src), {name: 'image'}, function (torrent) {
+  client.seed(Buffer.from(img.src), {name: 'image'}, function (torrent) {
     console.log('seeding ' + torrent.infoHash)
     torrent.on('download', function () {
       updateSpeed(torrent)
@@ -59,7 +59,7 @@ if (downloadedImg) {
     }, 1000)
     updateSpeed(torrent)
 
-    var xhr = new XMLHttpRequest()
+    var xhr = new window.XMLHttpRequest()
     xhr.open('POST', window.location.href, true)
     xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8')
 
