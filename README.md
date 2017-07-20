@@ -45,6 +45,4 @@ MIT
 
 Two Bucks Ltd © 2017
 
-![https://twobucks.co](https://twobucks.co/assets/images/logo-small.png)
-
-[https://twobucks.co]()
+[![https://twobucks.co](https://twobucks.co/assets/images/logo-small.png)](https://twobucks.co)
