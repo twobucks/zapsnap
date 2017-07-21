@@ -1,4 +1,4 @@
-# [:zap: Zapsnap](http://seedshot.io/) [![Build Status](https://travis-ci.org/twobucks/snapzap.svg?branch=master)](https://travis-ci.org/twobucks/snapzap)
+# [:zap: Zapsnap](http://zapsnap.io/) [![Build Status](https://travis-ci.org/twobucks/snapzap.svg?branch=master)](https://travis-ci.org/twobucks/snapzap)
 
 Temporary peer to peer screenshot sharing from your browser.
 
