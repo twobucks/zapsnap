@@ -2,17 +2,6 @@
 
 Temporary peer to peer screenshot sharing from your browser.
 
-## Installation
-
-```
-npm install -g seedshot-cli
-```
-
-## Usage
-
-```
-seedshot
-```
 
 ## What rocks
 
@@ -26,7 +15,6 @@ seedshot
 * browser support, since it depends on [WebTorrent](https://github.com/feross/webtorrent) which doesn't support IE and probably lacks support for majority
 of mobile browsers
 * each file depends on torrent network so it takes around ~3s to load the image
-* no app so you have to use the CLI tool
 * no Windows support for taking screenshots
 * once you as an owner of an image close the browser, the file might still be available if other peers keep their browser open
 
