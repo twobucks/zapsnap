@@ -33,7 +33,8 @@ app.get('/:uuid', function (req, res) {
     if (doc) {
       res.render('image', {
         base64: doc.base64,
-        infoHash: doc.infoHash
+        infoHash: doc.infoHash,
+        bundlePath: process.env.NODE_ENV === 'production' ? '/public/bundle.min.js' : '/public/bundle.js'
       })
     } else {
       res.redirect('404')
