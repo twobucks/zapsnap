@@ -37027,7 +37027,15 @@ if (!DetectRTC.isWebRTCSupported) {
 }
 
 function updateSpeed(torrent) {
-  status.innerHTML = '<b>Viewing:</b> ' + parseInt(torrent.wires.length + 1);
+  var peerCount = parseInt(torrent.wires.length + 1);
+  var statusHTML = '<b>Viewing</b>';
+
+  statusHTML += ' ' + peerCount;
+  if (peerCount === 1) {
+    statusHTML = '</br> You are the only one viewing this image. </br> Copy and send this URL for sharing or close this window to stop sharing.';
+  }
+
+  status.innerHTML = statusHTML;
 }
 
 if (downloadedImg) {
@@ -37078,7 +37086,6 @@ if (downloadedImg) {
     xhr.open('POST', window.location.href, true);
     xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
 
-    // send the collected data as JSON
     xhr.send(JSON.stringify({
       infoHash: torrent.magnetURI
     }));
