@@ -44,7 +44,6 @@
     "nodemon": "^1.8.1",
     "stylus": "^0.53.0",
     "uglifyjs-webpack-plugin": "^0.4.6",
-    "watchify": "^3.6.1",
     "webpack": "^2.6.1"
   }
 }
