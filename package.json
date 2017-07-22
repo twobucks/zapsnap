@@ -7,11 +7,11 @@
     "test": "standard",
     "build": "npm run build-css && npm run build-js",
     "build-css": "stylus -u nib css/main.styl -o public/ -c",
-    "build-js": "browserify --debug client > public/bundle.js && uglifyjs --compress --mangle -- public/bundle.js > public/bundle.min.js",
+    "build-js": "webpack",
     "start": "node server",
     "watch": "npm run watch-css & npm run watch-js & DEBUG=instant* nodemon server",
     "watch-css": "stylus -u nib css/main.styl -o public/ -w",
-    "watch-js": "watchify client -o public/bundle.js -dv",
+    "watch-js": "webpack --watch",
     "deploy": "rsync -av --progress --exclude=node_modules --exclude=db --exclude=.git . root@82.196.13.85:/home/hrvoje/seedshot",
     "ssh": "ssh root@82.196.13.85",
     "db": "mongod --dbpath db"
@@ -36,9 +36,14 @@
     "webtorrent": "^0.98.19"
   },
   "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
     "nib": "^1.1.0",
     "nodemon": "^1.8.1",
     "stylus": "^0.53.0",
-    "watchify": "^3.6.1"
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "watchify": "^3.6.1",
+    "webpack": "^2.6.1"
   }
 }
