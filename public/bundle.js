@@ -37018,8 +37018,12 @@ var downloadedImg = document.getElementById('downloaded');
 
 var status = document.querySelector('.status');
 
+var downloadStarted = false;
+
 if (!DetectRTC.isWebRTCSupported) {
-  status.innerHTML = 'This browser is unsupported.  Please use a browser with WebRTC support.';
+  document.getElementById('spinner').style.display = 'none';
+  downloadStarted = true;
+  status.innerHTML = 'This browser is unsupported. Please use a browser with WebRTC support.';
 }
 
 function updateSpeed(torrent) {
@@ -37027,8 +37031,6 @@ function updateSpeed(torrent) {
 }
 
 if (downloadedImg) {
-  var downloadStarted = false;
-
   setTimeout(function () {
     if (!downloadStarted) {
       document.getElementById('spinner').style.display = 'none';
