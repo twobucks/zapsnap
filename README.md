@@ -2,6 +2,10 @@
 
 Temporary peer to peer screenshot sharing from your browser.
 
+## Links
+
+* [zapsnap-desktop](https://github.com/twobucks/zapsnap-desktop) - MacOS app for taking screenshots
+* [seedshot-cli](https://github.com/twobucks/seedshot-cli) - CLI tool for taking screenshots (Linux and MacOS)
 
 ## What rocks
 
