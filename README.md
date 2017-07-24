@@ -34,6 +34,8 @@ npm run build # build CSS/JS for production
 
 Logo created by il Capitano from [Noun Project](https://thenounproject.com/search/?q=zap&i=889349).
 
+Design by [Benjamin Alijagić](https://twitter.com/benjam1n).
+
 ## License
 
 MIT
