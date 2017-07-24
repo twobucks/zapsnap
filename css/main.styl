@@ -1,0 +1,256 @@
+html, body
+  height: 100%
+  min-height: 100%
+  margin: 0
+
+body
+  background-color: #fffecd !important
+  font-family: 'Roboto', sans-serif !important
+  //color: white !important
+
+body
+  &:before
+    content: " "
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 20px
+    background: repeating-linear-gradient(
+      45deg,
+      #fffecd,
+      #fffecd 30px,
+      red 30px,
+      red 60px
+    )
+
+h1
+  margin: 100px 0 40px 0
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+h1 .wrapper
+
+h1 svg
+  margin-left: -18px
+  transition: .6s all ease-in
+
+h1 svg:first-child
+  margin: 0
+
+h1 svg
+  opacity: .7
+
+h1 svg path
+  fill: #000
+
+h1 #highVoltage
+  opacity: 1
+  position: relative
+  top: 10px
+  transform: scale(1.4)
+
+h1 #highVoltage.closedCircuit
+  transform: scale(0)
+
+h1 #highVoltage path
+  fill: red
+
+h2
+  width: 70%
+  margin: 0 auto
+  font-weight: 300
+  font-size: 48px
+  color: rgba(0,0,0,.6)
+  letter-spacing: -0.04em
+  line-height: 1.1
+
+.container
+  text-align: center
+  min-height: 75%
+
+.container.image
+  padding: 50px 20px 20px 20px
+
+.button
+  display: inline-block
+  margin: 0 0 5px 0
+  padding: 18px 32px
+  background: red
+  color: rgba(255,255,255,1)
+  font-size: 21px
+  font-weight: 800
+  //text-transform: uppercase
+  letter-spacing: .02em
+  border-radius: 4px
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,.1)
+  transition: .4s all
+  &:hover {
+    transform: scale(1.04)
+    box-shadow: 0 14px 25px 0 rgba(0,0,0,.15)
+    transition: .4s all
+  }
+  &:hover, &:visited, &:link, &:active {
+    text-decoration: none
+  }
+
+  &:active {
+    color: #16a085 !important /* Fallback for older browsers */
+    background-color: #fff
+  }
+
+  &.disabled {
+    //color: #ddd !important
+    //color: rgba(255, 255, 255, 0.5) !important
+    cursor: default
+    line-height: 20px
+
+    &:active {
+      //color: #ddd !important
+      background-color: transparent !important
+    }
+  }
+
+
+.button-wrapper
+  margin: 50px
+  padding-bottom: 0px
+
+@media (min-width: 768px)
+  .button-wrapper
+    padding-bottom: 100px
+
+.faq
+  max-width: 400px
+  margin: auto
+  padding: 20px
+
+.faq a
+  color: rgba(0,0,0,.8) !important
+  border-bottom: 2px solid rgba(0,0,0,.2)
+  font-weight: 700 !important
+  text-decoration: none
+  position: relative
+  z-index: 2
+  &:before
+    content: " "
+    position: absolute
+    z-index: 1
+    bottom: 0
+    left 0
+    background: rgba(0,0,0,.1)
+    width: 100%
+    height: 0px
+    transition: .2s all
+  &:hover
+    color: #fff
+  &:hover:before
+      height: 20px
+      transition: .2s all
+
+h3
+  margin: 25px 0 0 0
+  color: rgba(0,0,0,.65)
+
+p
+  margin: 10px 0 0 0
+  font-size: 18px
+  color: rgba(0,0,0,.6)
+  line-height: 1.5
+
+footer, .push
+  margin-top: 70px
+  height: 50px
+  line-height: 50px
+  text-align: center
+  font-weight: 400
+  font-size: 10px
+  text-transform: uppercase
+  letter-spacing: .1em
+  color: rgba(0,0,0,.6)
+  font-size: 14px
+
+footer a
+  color: rgba(0,0,0,.6)
+  text-decoration: none
+
+img
+  max-width: 100%
+
+.status
+  margin-top: 100px
+
+.spinner
+  margin: 100px auto
+  width: 50px
+  height: 40px
+  text-align: center
+  font-size: 10px
+
+
+.spinner > div {
+  background-color: #f00
+  height: 100%
+  width: 6px
+  display: inline-block
+
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out
+  animation: sk-stretchdelay 1.2s infinite ease-in-out
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s
+  animation-delay: -1.1s
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s
+  animation-delay: -1.0s
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s
+  animation-delay: -0.9s
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s
+  animation-delay: -0.8s
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4)
+    -webkit-transform: scaleY(0.4)
+  }  20% {
+    transform: scaleY(1.0)
+    -webkit-transform: scaleY(1.0)
+  }
+}
+
+.mobile {
+  display: none
+}
+
+// mobile
+
+@media (max-width: 700px)
+  h1
+    transform: scale(.8)
+
+    .wrapper
+      margin: 0
+
+  .mobile {
+    display: block
+  }
+
+  #highVoltage {
+    margin: 20px
+  }
