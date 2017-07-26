@@ -74,7 +74,7 @@ h2
   font-size: 48px;
   color: rgba(0,0,0,.6);
   letter-spacing: -0.04em;
-  line-height: 1.1;
+  line-height: 1.2;
 
 .container
   text-align: center
@@ -104,28 +104,26 @@ h2
   &:hover, &:visited, &:link, &:active {
     text-decoration: none
   }
-
   &:active {
     color: #16a085 !important /* Fallback for older browsers */
     background-color: #fff
   }
-
   &.disabled {
     //color: #ddd !important
     //color: rgba(255, 255, 255, 0.5) !important
     cursor: default
     line-height: 20px
-
     &:active {
       //color: #ddd !important
       background-color: transparent !important
     }
   }
 
-
 .button-wrapper
   margin: 50px
   padding-bottom: 0px
+  p
+    font-style: italic;
 
 @media (min-width: 768px)
   .button-wrapper
@@ -133,7 +131,7 @@ h2
 
 .faq
   width: 50%
-  margin: auto
+  margin: 0 auto
 
 .faq a
   color: rgba(0,0,0,.8) !important
@@ -246,5 +244,13 @@ img
 // mobile
 
 @media (max-width: 700px)
+  h1
+    margin: 0
   h1 .wrapper
     transform: scale(.5)
+    width: 200%;
+    margin-left: -50%;
+  h2
+    font-size: 30px;
+  .faq
+    width: 85%
